@@ -8,31 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // Slider
   const swiperEdits = new Swiper(".edits__slider", {
-    loop: true,
+    // Optional parameters
     slidesPerView: 3,
     spaceBetween: 40,
     freeMode: true,
     // Navigation arrows
-    navigation: {
-      nextEl: ".edits__arrow-move",
-    },
+    navigation: { nextEl: ".edits__arrow-move" },
     breakpoints: {
-      320: {
-        slidesPerView: 1.7,
-        spaceBetween: 20,
-      },
-      450: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1200: {
-        slidesPerView: 3.28,
-        spaceBetween: 40,
-      },
+      320: { slidesPerView: 1.7, spaceBetween: 20 },
+      450: { slidesPerView: 2, spaceBetween: 30 },
+      768: { slidesPerView: 3, spaceBetween: 30 },
+      1200: { slidesPerView: 3.28, spaceBetween: 40 },
     },
   });
 });
