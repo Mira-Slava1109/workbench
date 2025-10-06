@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // Slider
   const swiperEdits = new Swiper(".edits__slider", {
-    // Optional parameters
     loop: true,
     slidesPerView: 3,
     spaceBetween: 40,
