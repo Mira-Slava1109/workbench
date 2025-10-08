@@ -1,0 +1,14 @@
+.footer {
+  display: none;
+  @media (max-width: $mobileSmall) {
+    display: block;
+    padding-block-start: toRem(20);
+    @include adaptiveValue("padding-block-end", 70, 40);
+  }
+  // .footer__container
+  &__container {
+  }
+  // .footer__social
+  &__social {
+  }
+}

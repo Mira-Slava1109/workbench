@@ -2215,6 +2215,42 @@ body {
   background: url("../img/icons/email.svg") center/contain no-repeat;
 }
 
+.footer {
+  display: none;
+}
+@media (max-width: 28.125em) {
+  .footer {
+    display: block;
+    -webkit-padding-before: 1.25rem;
+            padding-block-start: 1.25rem;
+  }
+}
+@media (max-width: 28.125em) and (min-width: 81.375em) {
+  .footer {
+    -webkit-padding-after: 4.375rem;
+            padding-block-end: 4.375rem;
+  }
+}
+@media (max-width: 28.125em) and (min-width: 20em) and (max-width: 81.375em) {
+  @supports (padding-block-end: clamp( 2.5rem , 1.8890020367rem  +  3.0549898167vw , 4.375rem )) {
+    .footer {
+      -webkit-padding-after: clamp( 2.5rem , 1.8890020367rem  +  3.0549898167vw , 4.375rem );
+              padding-block-end: clamp( 2.5rem , 1.8890020367rem  +  3.0549898167vw , 4.375rem );
+    }
+  }
+  @supports not (padding-block-end: clamp( 2.5rem , 1.8890020367rem  +  3.0549898167vw , 4.375rem )) {
+    .footer {
+      -webkit-padding-after: calc(2.5rem + 1.875 * (100vw - 20rem) / 61.375);
+              padding-block-end: calc(2.5rem + 1.875 * (100vw - 20rem) / 61.375);
+    }
+  }
+}
+@media (max-width: 28.125em) and (max-width: 20em) {
+  .footer {
+    -webkit-padding-after: 2.5rem;
+            padding-block-end: 2.5rem;
+  }
+}
 .title {
   position: relative;
   line-height: 116.7%; /* 70/60 */
