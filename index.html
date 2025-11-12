@@ -1,22 +1,151 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>squareUp</title>
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
-   <title>Lesson 6</title>
-</head>
-
-<body>
-   <header class="header">
-   </header>
-   <main class="page">
-   </main>
-   <footer class="footer">
-      <a target="_blank" class="footer__link" href="continued.html">*Весна 2024*</a>
-   </footer>
-
-</body>
-
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="#" class="header__logo _icon-logo">
+            <img src="img/SquareUpLogo.svg" alt="logo" />
+          </a>
+          <div class="header__menu menu">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link _active">Home</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Work</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Process</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Careers</a></li>
+              </ul>
+            </nav>
+          </div>
+          <a data-da=".menu__body, 991.98" href="#" class="header__button button">Contact Us</a>
+        </div>
+      </header>
+      <main class="page">
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__body">
+              <h1 class="hero__title">A Digital Product Studio that will Work</h1>
+              <div class="hero__targets">
+                <ul class="hero__targets-list">
+                  <li class="hero__target hero__target--for"><span>Startups</span></li>
+                  <li class="hero__target"><span>Enterprise leaders</span></li>
+                  <li class="hero__target"><span>Media & Publishers</span></li>
+                  <li class="hero__target hero__target--and"><span>Social Good</span></li>
+                </ul>
+              </div>
+              <div class="hero__buttons">
+                <a href="#" class="hero__button button button--border">Our Works</a>
+                <a href="#" class="hero__button button">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="trusted">
+          <div class="trusted__container">
+            <div class="trusted__title">Trusted By 250+ Companies</div>
+            <div class="trusted__content">
+              <ul class="trusted__companies">
+                <li class="trusted__company">
+                  <img src="img/trusted/zapier.svg" alt="Image" />
+                </li>
+                <li class="trusted__company">
+                  <img src="img/trusted/spotity.svg" alt="Image" />
+                </li>
+                <li class="trusted__company">
+                  <img src="img/trusted/zoom.svg" alt="Image" />
+                </li>
+                <li class="trusted__company">
+                  <img src="img/trusted/slack.svg" alt="Image" />
+                </li>
+                <li class="trusted__company">
+                  <img src="img/trusted/amazon.svg" alt="Image" />
+                </li>
+                <li class="trusted__company">
+                  <img src="img/trusted/adode.svg" alt="Image" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="services__container">
+            <div class="services__block-header block-header">
+              <h2 class="block-header__title">Our Services</h2>
+              <div class="block-header__text">
+                <p>
+                  Transform your brand with our innovative digital solutions that captivate and engage your audience.
+                </p>
+              </div>
+            </div>
+            <div class="services__body">
+              <article class="services__item item-services">
+                <div class="item-services__header">
+                  <div class="item-services__icon-wrapper">
+                    <div class="item-services__icon _icon-desing"></div>
+                  </div>
+                  <h4 class="item-services__title">Design</h4>
+                </div>
+                <div class="item-services__text">
+                  <p>
+                    At Squareup, our design team is passionate about creating stunning, user-centric designs that
+                    captivate your audience and elevate your brand. We believe that great design is not just about
+                    aesthetics; it's about creating seamless and intuitive user experiences.
+                  </p>
+                </div>
+                <a href="#" class="item-services__button button button--grey">Learn More</a>
+              </article>
+              <article class="services__item item-services">
+                <div class="item-services__header">
+                  <div class="item-services__icon-wrapper">
+                    <div class="item-services__icon _icon-engineering"></div>
+                  </div>
+                  <h4 class="item-services__title">Engineering</h4>
+                </div>
+                <div class="item-services__text">
+                  <p>
+                    Our engineering team combines technical expertise with a passion for innovation to build robust and
+                    scalable digital solutions. We leverage the latest technologies and best practices to deliver
+                    high-performance applications tailored to your specific needs.
+                  </p>
+                </div>
+                <a href="#" class="item-services__button button button--grey">Learn More</a>
+              </article>
+              <article class="services__item item-services">
+                <div class="item-services__header">
+                  <div class="item-services__icon-wrapper">
+                    <div class="item-services__icon _icon-pm"></div>
+                  </div>
+                  <h4 class="item-services__title">Project Management</h4>
+                </div>
+                <div class="item-services__text">
+                  <p>
+                    Our experienced project management team ensures that your projects are delivered on time, within
+                    budget, and according to your specifications. We follow industry-standard methodologies and employ
+                    effective communication and collaboration tools to keep you informed throughout the development
+                    process.
+                  </p>
+                </div>
+                <a href="#" class="item-services__button button button--grey">Learn More</a>
+              </article>
+            </div>
+          </div>
+        </section>
+        
+      </main>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="js/dynamic_adapt.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
 </html>
