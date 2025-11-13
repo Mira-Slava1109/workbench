@@ -1,0 +1,100 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Barlow:regular,500,600&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500&display=swap");
+
+@import "_fonts.scss";
+
+@import "_icons.scss";
+
+@import "_reset.scss";
+
+@import "_mixins.scss";
+
+@import "_variables.scss";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1596;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$backgroundColor: #1a1a1a;
+$mainColor: #ededed;
+
+$whiteColor: #ffffff;
+$greenColor: #9eff00;
+$greenColorTitle: #d8ff99;
+$greenColorActive: #c5ff66;
+$greyGradient: linear-gradient(200deg, #242620 30%, #272b2100 70%), linear-gradient(0deg, #1a1a1a 0%, #1a1a1a00 100%);
+
+$strokeGradient: linear-gradient(180deg, rgba(#2e2e2e, 1) 0%, rgba(#2e2e2e, 0) 100%);
+
+$greyColor: #262626;
+$greyLiteColor: #98989a;
+$greyButton: rgba(36, 36, 36, 0.2);
+$greyDarkColor: #1a1a1a;
+
+$fontMain: "Inter";
+
+$tablet: toEm(991.98);
+$mobile: toEm(767.98);
+$mobileSmall: toEm(450);
+
+$border: toRem(1) solid $greyColor;
+
+body {
+  font-family: $fontMain;
+  color: $mainColor;
+  background-color: $backgroundColor;
+  font-size: toRem(18);
+}
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  padding-inline: toRem(15);
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: toPx($containerWidth);
+  margin: 0 auto;
+  // padding: 0 0.9375rem;
+}
+main [class*="__container"] {
+  border-inline: $border;
+  border-bottom: $border;
+}
+// Лічильник для списку
+%listCounter {
+  list-style-type: none;
+  counter-reset: item;
+  li {
+    position: relative;
+    &:before {
+      counter-increment: item;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+@import "_header.scss";
+
+@import "_main.scss";
+
+@import "_footer.scss";
+
+@import "_commons.scss";
