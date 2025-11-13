@@ -1,0 +1,35 @@
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1596;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$backgroundColor: #1a1a1a;
+$mainColor: #ededed;
+
+$whiteColor: #ffffff;
+$greenColor: #9eff00;
+$greenColorTitle: #d8ff99;
+$greenColorActive: #c5ff66;
+$greyGradient: linear-gradient(200deg, #242620 30%, #272b2100 70%), linear-gradient(0deg, #1a1a1a 0%, #1a1a1a00 100%);
+
+$strokeGradient: linear-gradient(180deg, rgba(#2e2e2e, 1) 0%, rgba(#2e2e2e, 0) 100%);
+
+$greyColor: #262626;
+$greyLiteColor: #98989a;
+$greyButton: rgba(36, 36, 36, 0.2);
+$greyDarkColor: #1a1a1a;
+
+$fontMain: "Inter";
+
+$tablet: toEm(991.98);
+$mobile: toEm(767.98);
+$mobileSmall: toEm(450);
+
+$border: toRem(1) solid $greyColor;

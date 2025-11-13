@@ -1,0 +1,349 @@
+.hero {
+  padding-block-start: toRem(131);
+  font-family: "Barlow";
+  @media (max-width: toEm(1440)) {
+    padding-block-start: toRem(85);
+  }
+  @media (max-width:$mobile){
+    margin-inline: toRem(-15);
+  }
+  // .hero__container
+  &__container {
+    padding-inline: toRem(15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include adaptiveValue("padding-block-start", 112, 80);
+    background: url("../img/bg-hero.png") 0 0 repeat;
+    &::after {
+      content: "";
+      position: relative;
+      inline-size: 100%;
+      aspect-ratio: 3.56;
+      background: url("../img/bg-image.svg") center / cover no-repeat;
+      margin-block-start: -11%;
+      opacity: 0.7;
+      @media (max-width: $mobile) {
+        aspect-ratio: 1.5;
+      }
+    }
+  }
+  // .hero__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+  // .hero__title
+  &__title {
+    @include adaptiveValue("font-size", 68, 34);
+    justify-self: center;
+    font-weight: 700;
+    line-height: 1.206;
+    text-align: center;
+    &:not(:last-child) {
+      margin-block-end: toRem(40);
+      @media (max-width: $mobile) {
+        margin-block-end: toRem(30);
+      }
+    }
+    @media (min-width: $mobile) {
+      inline-size: 64%;
+    }
+  }
+  // .hero__targets
+  &__targets {
+    @include adaptiveValue("padding-inline", 40, 10);
+    @include adaptiveValue("padding-block", 24, 18);
+    border-radius: toRem(12);
+    border: $border;
+    display: grid;
+    justify-content: space-around;
+    background-color: $greyButton;
+    backdrop-filter: blur(12px);
+    &:not(:last-child) {
+      margin-block-end: toRem(50);
+      @media (max-width: $mobile) {
+        margin-block-end: toRem(40);
+      }
+    }
+  }
+  // .hero__targets-list
+  &__targets-list {
+    display: flex;
+    gap: toRem(6);
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: toRem(4);
+    }
+  }
+  // .hero__target
+  &__target {
+    display: flex;
+    align-items: center;
+    gap: toRem(6);
+    &:not(:nth-last-child(-n + 2))::after {
+      content: ",";
+    }
+    @media (min-width: toEm(1440)) {
+      font-size: toRem(22);
+    }
+    @media (max-width: $mobile) {
+      gap: toRem(4);
+    }
+    span {
+      line-height: 1.5;
+      @media (min-width: $mobile) {
+        padding: toRem(12) toRem(14);
+        border-radius: toRem(8);
+        background-color: $greyColor;
+      }
+      @media (max-width: toEm(1440)) {
+        padding: toRem(6) toRem(10);
+      }
+      @media (max-width: $mobile) {
+        font-size: toRem(16);
+        color: $greyLiteColor;
+        padding: toRem(0);
+        text-transform: lowercase;
+      }
+    }
+    &--for::before,
+    &--and::before {
+      color: $greyLiteColor;
+      @media (max-width: $mobile) {
+        font-size: toRem(16);
+      }
+    }
+    // .hero__target--for
+    &--for::before {
+      content: "For";
+    }
+    // .hero__target--and
+    &--and {
+      span {
+        margin-inline-end: 0;
+      }
+    }
+    &--and::before {
+      content: "and";
+    }
+  }
+  // .hero__buttons
+  &__buttons {
+    display: flex;
+    gap: toRem(13);
+    justify-content: center;
+  }
+  // .hero__button
+  &__button {
+  }
+}
+//========================================================================================================================================================
+.trusted {
+  font-family: "Barlow";
+  // .trusted__container
+  &__container {
+    position: relative;
+    // @include adaptiveValue("padding-block", 40, 20);
+
+    background-color: $greyButton;
+    @media (min-width: toEm(1440)) {
+      margin-block-start: toRem(-30);
+    }
+  }
+  // .trusted__title
+  &__title {
+    position: absolute;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    inset-block-start: toRem(-31);
+    font-weight: 500;
+    padding: toRem(20) toRem(34);
+    background-color: $greyDarkColor;
+    border: $border;
+    border-radius: toRem(100);
+    white-space: nowrap;
+    @media (max-width: toEm(1440)) {
+      padding: toRem(14) toRem(24);
+      inset-block-start: toRem(-24);
+    }
+    @media (max-width: $mobile) {
+      font-size: toRem(14);
+    }
+  }
+  // .trusted__content
+  &__content {
+    padding-block: toRem(40);
+    @media (max-width: toEm(1439.98)) {
+      padding-block: toRem(30);
+    }
+    @media (max-width: $mobile) {
+      padding-block: toRem(20) toRem(0);
+      border-inline: $border;
+    }
+  }
+  // .trusted__companies
+  &__companies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(248), 1fr));
+    gap: toRem(20);
+    padding-block: toRem(20);
+    @media (max-width: toEm(1439.98)) {
+      padding-block: toRem(16);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      padding-block: 0;
+      gap: toRem(0);
+    }
+  }
+  // .trusted__company
+  &__company {
+    place-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-inline-size: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: $mobile) {
+      padding: toRem(30);
+      border-block-end: $border;
+      &:nth-child(2n) {
+        border-inline-start: $border;
+      }
+    }
+  }
+}
+//========================================================================================================================================================
+.services {
+  // .services__container
+  &__container {
+  }
+  // .services__block-header
+  &__block-header {
+    background: url("../img/services/bg.png") 0 0 / cover no-repeat;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("../img/bg-hero.png") 0 0 repeat;
+    }
+  }
+  // .services__body
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: toRem(1200)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $tablet) {
+      grid-template-columns: auto;
+    }
+  }
+  // .services__item
+  &__item {
+  }
+}
+.item-services {
+  @include adaptiveValue("padding", 50, 30);
+  display: flex;
+  flex-direction: column;
+  gap: toRem(20);
+  @media (min-width: toRem(1200)) {
+    &:nth-child(3n + 1),
+    &:nth-child(3n + 2) {
+      border-inline-end: $border;
+    }
+  }
+  @media (max-width: toRem(1199.98)) {
+    border-block-end: $border;
+    &:nth-child(2n + 1) {
+      border-inline-end: $border;
+    }
+    // &:last-child:nth-child(2n + 1) {
+    //   grid-column: span 2;
+    // }
+  }
+  @media (max-width: $tablet) {
+    border-inline-end: none;
+  }
+  //item-services__header
+  &__header {
+    display: grid;
+    @include adaptiveValue("gap", 40, 14);
+    @media (max-width: $mobile) {
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
+  }
+  //item-services__icon-wrapper
+  &__icon-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: toRem(10);
+    justify-self: start;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: toRem(1); // товщина stroke
+      background: $strokeGradient;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      border-radius: inherit;
+      z-index: 2;
+      pointer-events: none;
+    }
+  }
+  // .item-services__icon
+  &__icon {
+    @include adaptiveValue("inline-size", 88, 58);
+    aspect-ratio: 1;
+    border-radius: toRem(10);
+    display: grid;
+    place-items: center;
+    background-image: $greyGradient;
+    // box-shadow: 0 toRem(-2) toRem(1) #2e2e2e;
+    &::before {
+      position: relative;
+      color: $greenColor;
+      font-size: toRem(32);
+    }
+    @include gradientOverlay($greyGradient);
+  }
+  // .item-services__title
+  &__title {
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  // .item-services__text
+  &__text {
+    flex-grow: 1;
+    line-height: 134%;
+    letter-spacing: toRem(-1);
+    @media (min-width: toRem(1200)) {
+      &:not(:last-child) {
+        @include adaptiveValue("padding-block-end", 60, 0);
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: toRem(14);
+      line-height: 150%;
+    }
+  }
+  // .item-services__button
+  &__button {
+  }
+}
